@@ -1,0 +1,35 @@
+Pattern is:
+
+         
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+    * * * * * *
+   * * * * * * *
+  * * * * * * * *
+ * * * * * * * * *
+ 
+ int n=10;
+//n denotes no of rows
+
+//if n is odd, odd i will print stars on odd j and spaces on even j, even vice versa
+//if n is even, odd i will print stars on even j and spaces on odd j, even vice versa
+int flag;
+if(n%2==0) flag=0;
+else flag=1;
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<n-1+i;j++)
+        if(j>=n-1-i)
+            if(i%2==0){
+                if((j+flag)%2==0) cout<<"*";
+                else cout<<" ";
+            }else{
+                if((j+flag)%2!=0) cout<<"*";
+                else cout<<" ";
+            }
+        else cout<<" ";
+    cout<<endl;
+}
