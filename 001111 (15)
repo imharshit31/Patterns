@@ -1,0 +1,31 @@
+Pattern is:
+
+         *
+        * *
+       *   *
+      *     *
+     *       *
+    *         *
+   *           *
+  *             *
+ *               *
+*                 *
+ *               *
+  *             *
+   *           *
+    *         *
+     *       *
+      *     *
+       *   *
+        * *
+         *
+         
+int n=10;
+//n is the number till when the pattern expands before shrinking again
+
+for(int i=0;i<2*n-1;i++){
+    for(int j=0;j<n+min(i,2*n-2-i);j++)
+        if(j==n-1-min(i,2*n-2-i) or j==n+min(i,2*n-2-i)-1) cout<<"*";
+        else cout<<" ";
+    cout<<endl;
+}
