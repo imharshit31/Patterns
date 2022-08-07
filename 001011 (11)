@@ -1,0 +1,26 @@
+Pattern is:
+
+* * * * * * * * * * 
+ * * * * * * * * * 
+  * * * * * * * * 
+   * * * * * * * 
+    * * * * * * 
+     * * * * * 
+      * * * * 
+       * * * 
+        * * 
+         * 
+
+int n=10;
+//n denotes no of rows
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<2*n-i;j++){
+        if(j>=i){
+            if(i%2==j%2) cout<<"*";
+            //even rows will have *s on even cols, odd rows will have *s on odd cols
+            else cout<<" ";
+        }else cout<<" ";
+    }
+    cout<<endl;
+}
