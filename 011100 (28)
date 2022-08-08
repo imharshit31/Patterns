@@ -1,0 +1,21 @@
+Pattern is:
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+    
+int n=5;
+//n denotes the peak of the pattern
+
+for(int i=0;i<2*n-1;i++){
+    for(int j=0;j<=n-1+min(i,2*n-2-i);j++)
+        if( (n-1+min(i,2*n-2-i)-j)%2==0 and (n-1+min(i,2*n-2-i)-j)/2<=min(i,2*n-2-i) ) cout<<"*";
+        else cout<<" ";
+    cout<<endl;
+}
