@@ -1,0 +1,34 @@
+Pattern is:
+
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+
+int comb(int n, int r){
+    
+  int ans=1;
+
+  for(int i=1;i<=n;i++) ans*=i;
+  for(int i=1;i<=r;i++) ans/=i;
+  for(int i=1;i<=n-r;i++) ans/=i;
+
+  return ans;
+  
+}
+
+int n=5;
+//n denotes the no of rows
+
+int diff;
+if(n%2==0) diff=1;
+else diff=0;
+// if n is even, odd j prints val on even i, and vice versa for even j and when n is odd
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<n+i;j++)
+        if((n+i-1-j)/2<=i and (abs((i%2)-(j%2))==diff)) cout<<comb(i,(n+i-1-j)/2);
+        else cout<<" ";
+    cout<<endl;
+}
