@@ -1,0 +1,17 @@
+Pattern is:
+
+1        1
+12      21
+123    321
+1234  4321
+1234554321
+
+int n=5;
+//n denotes the no of rows
+
+for(int i=0;i<n;i++){
+    for(int j=0;j<2*n;j++)
+        if(j<=i or 2*n-1-j<=i) cout<<min(j+1,2*n-j);
+        else cout<<" ";
+    cout<<endl;
+}
